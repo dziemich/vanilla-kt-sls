@@ -1,0 +1,17 @@
+service: vanilla-kt-sls
+provider:
+  name: aws
+  runtime: java8
+  region: eu-west-1
+  profile: '<INPUT_YOUR_PROFILE_BUDDY>'
+
+package:
+  artifact: build/libs/vanilla-kt-sls-0.0.1-all.jar
+
+functions:
+  hello:
+    handler: dziemich.Handler
+    events:
+      - http:
+          path: /v1/hello
+          method: get

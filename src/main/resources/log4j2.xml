@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration name="vanilla-kt-sls" status="WARN">
+  <Appenders>
+    <Console name="console" target="SYSTEM_OUT">
+      <JsonLayout compact="true" complete="false" eventEol="true" includeStacktrace="true"
+        properties="true" stacktraceAsString="true">
+        <KeyValuePair key="log_timestamp" value="$${date:yyyy-MM-dd'T'HH:mm:ss.SSS}"/>
+      </JsonLayout>
+    </Console>
+  </Appenders>
+  <Loggers>
+    <root level="info">
+      <AppenderRef ref="console"/>
+    </root>
+  </Loggers>
+</Configuration>
